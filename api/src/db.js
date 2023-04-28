@@ -33,8 +33,7 @@ DietModel(sequelize);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-
-const { Recipe, Diet } = sequelize.models; // declara a user y post como sus models
+const { Recipe, Diet } = sequelize.models;
 
 // Relaciones
 Recipe.belongsToMany(Diet, {through: "RecipeDiet", timestamps: false});
