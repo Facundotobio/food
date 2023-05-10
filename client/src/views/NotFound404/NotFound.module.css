@@ -1,0 +1,12 @@
+.error{
+    backdrop-filter: blur(7px);
+    max-width: 100%;
+    margin-top: 250px;
+    font-size: 50px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-shadow: 4px 2px 0 rgb(255, 255, 255), -3px -1px 0 rgb(96, 96, 96);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

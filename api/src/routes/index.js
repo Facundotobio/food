@@ -5,6 +5,6 @@ const dietRoutes = require('./diet.routes')
 const router = Router();
 
 router.use('/recipes', recipeRoutes); 
-router.use('/diet', dietRoutes);
+router.use('/diets', dietRoutes);
 
 module.exports = router;

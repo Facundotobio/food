@@ -1,0 +1,137 @@
+.back{
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: lighter;
+    position:relative;
+    text-decoration: none;
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.75);
+    transition:all 180ms ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-inline-start: 1%;
+}
+
+.back:hover{
+    /* color: rgb(255, 255, 255); Cambiar el color del icono */
+    transform: translateY(1px); /* Mover hacia abajo al hacer clic */
+    box-shadow: 0 0 8px 3px #ffffff inset, 0 0 8px 3px #ffffff;
+    border-color: #000000;
+    }
+
+.detailContainer{
+    width: 94%;
+    height: 100%;
+    padding: 10px;
+    display:inline-flexbox;
+    color: whitesmoke;
+    backdrop-filter: blur(7px);
+    background:linear-gradient(to bottom, transparent, #eb863e);
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.img{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    height: 40%;
+    width: 50%;
+}
+.img:hover{
+    /* color: rgb(255, 255, 255); Cambiar el color del icono */
+    transform: translateY(0px); /* Mover hacia abajo al hacer clic */
+    box-shadow: 0 0 8px 8px #ffffff inset, 0 0 8px 8px #ffffff;
+    border-color: #000000;
+    cursor: pointer;
+    }
+
+.Detalle{
+    text-align: center;
+    font-size: 40px;
+}
+.name{
+    align-items: start;
+    font-size: 30px;
+}
+.id{
+    align-items: start;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.diets{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.typeOfDiet{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.resumen{
+    font-size: 30px;
+    font-weight: bold;
+}
+.resumenText{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.health{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.healthScore{
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.steps{
+    font-size: 30px;
+    font-weight: bold;
+}
+.stepsBySteps{
+    font-size: 20px;
+    font-weight: lighter;
+}
+    /* EN LA IMAGEN DEL DETALLE AGREGAR LA FUNCIONALIDAD DE QUE AL PASAR EL CURSOR
+    POR ENCIMA DE LA IMAGEN HAGA UNA TRANSICION Y SE MUESTRO MAS GRANDE, CON MAS BRILLO */
+
+     /* .image{
+        border: 1px solid black;
+        display: flex;
+        width: 280px;
+        max-height: 200px; 
+        text-decoration: none;
+        margin: 20px;
+        justify-content: center;
+        border-radius: 15px;
+        transition: transform 0.4s ease-in-out; 
+         position: relative;
+        cursor: pointer;
+    }
+    
+    .image:hover {
+         transform: translateY(2px); 
+         border-radius: 50px;
+         filter: brightness(1.05);
+         border: 2px solid black; 
+         width: 320px; 
+     }  */

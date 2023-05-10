@@ -1,0 +1,32 @@
+.footer {
+    height: 60px;
+    display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background:linear-gradient(to bottom, transparent , #5b2b08);
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgb(0, 0, 0), -2px -2px 0 rgb(0, 0, 0);
+  text-decoration: none;
+}
+.NavLink{
+    display: inline;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.red{
+    display: inline;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+}
+.icon{
+    color: rgb(255, 255, 255);
+    /* display: flex; */
+    text-decoration: none;
+}

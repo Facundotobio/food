@@ -1,0 +1,91 @@
+.container__filtros {
+    /* background-color: red; */
+    display: inline-block;
+    height: 45px;
+    width: 50%;
+    margin: 10px;
+    margin-left: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+  }
+  .container__filtros select {
+    padding: 6px 12px;
+    color: #333;
+    background-color: #ffffff;
+    border: double;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 25px;
+  }
+  .container__filtros select:hover {
+    /* outline: none; */
+    border: double;
+  }
+  .container__filtros select option {
+    background-color: #ffffff;
+    border: double;
+    cursor: pointer;
+    font-weight:100;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .container__filtros button {
+    align-items: center;
+    margin: 5px;
+    padding: 3px;
+    font-size: 18px; 
+    font-weight:100;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border:double; /* Sin borde */
+    background-color: #292a29; /* Color de fondo */
+    color: rgb(255, 255, 255); 
+    cursor: pointer;
+    text-align: center;
+    height: 35px;
+    width: 130px;
+    margin-left: 60px;
+  }
+
+  .c{
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 25px;
+    font-size: 15px; 
+    font-weight:100;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border:double; /* Sin borde */
+    background-color: #292a29; /* Color de fondo */
+    color: rgb(255, 255, 255); 
+    cursor: pointer;
+    text-align: center;
+    height: 35x;
+    width: 90px;
+    /* margin-left: 50px; */
+}
+
+.prevPage:hover{
+    background-color: #2d7a32; /* Cambiar el color de fondo */
+    color: white;    
+}
+
+.nextPage:hover{
+    background-color: #2d7a32; /* Cambiar el color de fondo */
+    color: white;    
+}
+
+.prevPage[disabled]{
+    border-color: #292a29;
+    cursor: no-drop;
+}
+
+.nextPage[disabled]{
+    border-color: #292a29;
+    cursor: no-drop;
+}

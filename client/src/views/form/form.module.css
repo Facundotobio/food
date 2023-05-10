@@ -1,0 +1,116 @@
+.formConteiner{
+    margin-left: 33%;
+    backdrop-filter: blur(3px);
+    background:linear-gradient(to bottom,#4d8b4d, transparent , #885836);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    width:500px;
+    border-radius: 25px;
+}
+
+.form{
+    height: 670px;    
+    max-height: 900px;
+}
+
+.Create{
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.75);
+    transition:all 180ms ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+    position: static;
+   }
+
+.Create:hover{
+    transform: translateY(1px); /* Mover hacia abajo al hacer clic */
+    box-shadow: 0 0 8px 3px #ffffff inset, 0 0 8px 3px #ffffff;
+    border-color: #000000;
+}
+
+.create{
+    color: whitesmoke;
+    font-size: 1.7rem;
+}
+
+.label{
+    color: whitesmoke;
+    font-size: 1rem;
+    margin: 3px;
+}
+.labelD{
+    color: whitesmoke;
+    font-size: 1rem;
+    margin: 3px;
+    margin-left: 10px;
+}
+.labelScore{
+    background-color: white;
+    display: flex;
+    color: rgb(84, 90, 206);
+    font-size: 1.2rem;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 40px;
+    padding: 5px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.level{
+    margin-left: 30px;
+}
+
+.input{
+    border-radius: 10px;
+    width: 400px;
+    border: 2px solid black;
+}
+
+.input2{
+    border-radius: 10px;
+    width: 380px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.x{
+    border: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    border-radius: 40px;
+    margin-left: 10px;
+    color: white;
+}
+
+.x:hover{
+    box-shadow: 0 0 8px 1px #ffffff inset, 0 0 8px 1px #ffffff;
+    border-color: #b70d0d;
+    color: #b70d0d;
+}
+
+.containerLevel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.dieta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.select{
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+.errors{
+    color: red;
+    text-shadow: 0 2px 2px hsla(0, 0%, 100%, 0.75);
+}

@@ -1,0 +1,77 @@
+.landing{
+    margin: 5%;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+.inicio{
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 3);
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+    color:rgb(255, 255, 255);
+    margin-top: 50px;
+  }
+.p{
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+  backdrop-filter: blur(15px);
+  color:rgb(255, 255, 255);
+}
+.p2{
+  text-align: start;
+    align-items: start;
+    justify-content: start;
+  font-weight: 600;
+  font-size: 30px;
+  backdrop-filter: blur(15px);
+  color:rgb(255, 255, 255);
+  width: 20%;
+}
+.p3{
+  text-align: start;
+    align-items: start;
+    justify-content: start;
+  font-weight: lighter;
+  font-size: 30px;
+  backdrop-filter: blur(15px);
+  color:rgb(255, 255, 255);
+  width: 50%;
+}
+
+.buttonLanding{
+    padding: 20px 30px;
+    margin: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.75);
+    transition:all 180ms ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.buttonLanding:hover{
+    /* color: rgb(255, 255, 255); Cambiar el color del icono */
+    transform: translateY(1px); /* Mover hacia abajo al hacer clic */
+    box-shadow: 0 0 8px 3px #ffffff inset, 0 0 8px 3px #ffffff;
+    border-color: #000000;
+    }
+
+body {
+    background-color: #ffecd1;
+    background-image: url("./Verduras.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}

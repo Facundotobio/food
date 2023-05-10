@@ -1,0 +1,52 @@
+.searchBar{
+    display:inline-block;
+    height: 45px;
+    width: 33%;
+    margin: 10px;
+    margin-left: 140px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+}
+
+.input{
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    padding: 3px;
+    font-size: 18px;
+    font-weight:300;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px; 
+    border:double;
+    border-color:  rgb(2, 2, 2);
+    text-align:center;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 25px;
+    width: 250px;
+}
+
+.buttonSubmit{
+    align-items: center;
+    margin: 5px;
+    padding: 3px;
+    font-size: 18px; 
+    font-weight:100;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border:double; /* Sin borde */
+    background-color: #292a29; /* Color de fondo */
+    color: rgb(255, 255, 255); 
+    cursor: pointer;
+    text-align: center;
+    height: 35px;
+    width: 130px;
+    margin-left: 50px;
+}
+.buttonSubmit:hover{
+    background-color: #2d7a32; /* Cambiar el color de fondo */
+    color: white;    
+}

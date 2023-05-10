@@ -1,0 +1,66 @@
+.recipe{
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 460px;
+    max-height: 420px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    display:inline-block;
+    background:linear-gradient(to bottom,#4d8b4d, transparent , #885836);
+    text-decoration-color: antiquewhite;  
+    margin: 10px;
+}
+
+.name{
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: transparent;
+}
+.name:hover{
+    font-weight: 600;
+}
+.navlink{
+    text-decoration: none;
+}
+
+.imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+    border: 1px solid black;
+    width: 400px;
+    max-height: 240px; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+        
+.diets{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight:600;
+}
+.diet{
+    font-size: 13px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+}

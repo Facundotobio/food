@@ -1,10 +1,10 @@
 const {createRecipe } = require('../controllers/controllerRecipe')
 
-
-const createRecipeHandler = async (req,res)=>{
+const postRecipeHandler = async (req,res)=>{
     try {
-        const {name,image,summaryOfTheDish,levelOfHealthyEating,stepByStep, diets} = req.body
-        const newRecipe = await createRecipe(name,image,summaryOfTheDish,levelOfHealthyEating,stepByStep,diets)
+        const {name,image,summaryOfTheDish,levelOfHealthyEating,stepByStep, createIndb, diets} = req.body
+        const newRecipe = await createRecipe(name,image,summaryOfTheDish,levelOfHealthyEating,stepByStep,createIndb, diets)
+        await newRecipe.addDiet(diets)
         res.status(201).json(newRecipe)
     } catch (error) {
         res.status(400).json({error:error.message})
@@ -12,4 +12,4 @@ const createRecipeHandler = async (req,res)=>{
 }
 
 
-module.exports = {createRecipeHandler}
+module.exports = {postRecipeHandler}

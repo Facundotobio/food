@@ -15,23 +15,25 @@ module.exports = (sequelize) => {
     },
     image:{
       type: DataTypes.STRING,
-      allowNull: false,
     },
     summaryOfTheDish:{
       type: DataTypes.TEXT,
-      allowNull: false,
     },
     levelOfHealthyEating:{
       type: DataTypes.INTEGER,
-      allowNull: false,
       validate:{
         min:0,
         max:100
       }
     },
     stepByStep:{
-      type: DataTypes.ARRAY(DataTypes.JSON),
+      type: DataTypes.STRING
+      // type: DataTypes.ARRAY(DataTypes.JSON),
+    } ,
+    createIndb: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
-    } 
+      defaultValue: true,
+    },
   },{ timestamps: false});
 };
