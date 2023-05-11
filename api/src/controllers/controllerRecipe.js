@@ -1,6 +1,6 @@
 const { Recipe, Diet } = require("../db");
 const axios = require("axios");
-const { API_KEY, API_KEY2, API_KEY3,API_KEY4, API_KEY5, API_KEY6 } = process.env;
+const { API_KEY, API_KEY2, API_KEY3,API_KEY4, API_KEY5, API_KEY6, API_PI, API_PI2 } = process.env;
 const {Op} = require('sequelize')
 const {cleanArray, cleanArrayDB}= require('./helpers.js')
 
@@ -11,7 +11,7 @@ const getAllRecipes = async () => {
     model: Diet, through: { attributes: [] }}})
     dbRecipes = cleanArrayDB(dbRecipes);
   const apiRecipesRaw = (
-  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY6}&number=50&addRecipeInformation=true`)).data.results
+  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI}&number=100&addRecipeInformation=true`)).data.results
    const apiRecipes = cleanArray(apiRecipesRaw)
       return [...dbRecipes, ...apiRecipes]  } 
   // RECORDAR PONER LA PETICION CON 100 RECETAS!!!!!!!!!!!!!!!!!!!!!
@@ -24,7 +24,7 @@ const searchRecipeByName = async (name) => {
   }}})
   const apiRecipesRaw = (
     await axios.get
-    (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY6}&addRecipeInformation=true`)).data.results
+    (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI}&addRecipeInformation=true`)).data.results
 
   const apiRecipes = cleanArray(apiRecipesRaw);
 
@@ -50,7 +50,7 @@ const getRecipeById = async (id)=>{
   const source = isNaN(id) ? 'bdd' : 'api'; // si el id es un string trae de la BDD sino de la api
                           // esta diferenciacion se logra al ponerle a mi modelo de recipe un ID UUID
   if(source === 'api'){
-  let recipe = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY6}`)
+  let recipe = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_PI}`)
   return {
     id: recipe.data.id,
     name: recipe.data.title,
@@ -59,7 +59,7 @@ const getRecipeById = async (id)=>{
     stepByStep: recipe.data.analyzedInstructions[0].steps,
     image: recipe.data.image,
     diets: recipe.data.diets,
-  };        // esta info se retorna en el DETAIL(busqueda por id)
+  };        // estas props se retornan en el DETAIL(busqueda por id)
   }
   let recipeDb = await Recipe.findByPk(id, {
     include: [

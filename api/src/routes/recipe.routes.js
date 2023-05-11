@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const {getRecipesHandler,getRecipesByIdHandler} = require('../handlers/recipesHandler');
 const {postRecipeHandler} = require('../handlers/postRecipesHandler');
-const { validate } = require('../middlewares/validate');
 
 const recipeRoutes = Router();
 
@@ -12,6 +11,6 @@ recipeRoutes.get('/', getRecipesHandler)
 recipeRoutes.get('/:id', getRecipesByIdHandler)
 
 // AGREGAR RECETA 
-recipeRoutes.post('/', validate, postRecipeHandler) 
+recipeRoutes.post('/', postRecipeHandler) 
                                                       
 module.exports = recipeRoutes;

@@ -6,23 +6,25 @@ import { orderByaz, orderByscore, filterBydiet, filtercreated, resetfilters} fro
 export default function Filtros({ diets, setorder, setscore }) {
   const dispatch = useDispatch();
 
-  /* ordenar  por nombre */
+  /* ordenar por asc - desc */
   function handleOderByname(e) {
     dispatch(orderByaz(e.target.value));
     setorder(e.target.value)}
 
-  /* ordenar  por Score */
+  /* ordenar por Score */
   function handleOrderScore(e) {
     dispatch(orderByscore(e.target.value));
     setscore(e.target.value)}
 
+    /* ordenar por dieta */
   function handleFilterDiets(e) {
     dispatch(filterBydiet(e.target.value))}
 
+    /* ordenar por recetas creadas / api */
   function handleFilterCreated(e) {
     dispatch(filtercreated(e.target.value))}
 
-
+    // window.location.reload(true);  
   function handleClick() {
       dispatch(resetfilters())
      }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { RecipeByName } from "../../redux/actions";
 
+
 const SearchBar = () =>{
     const dispatch = useDispatch()
     const [name, setName] = useState('')

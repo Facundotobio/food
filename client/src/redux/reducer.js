@@ -107,10 +107,8 @@ recipes: RsortedArr, // paso al estado el ordenamiento
 //========================================================================================
 
 case RESET_FILTERS:
-    
       return { ...state,
-        recipes: [...state.pruebareceta],
-    };
+        recipes: [...state.pruebareceta],};
 
 //========================================================================================
                                                         default:

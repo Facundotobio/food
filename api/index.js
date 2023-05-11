@@ -3,7 +3,7 @@ const { conn } = require('./src/db.js');
 const getDiets = require('./src/controllers/controllerDiets.js')
 
 
-conn.sync({ alter: true }).then(() => { // alter: no se borran mi datos ni se pisan
+conn.sync({ alter: false }).then(() => { // alter: no se borran mi datos ni se pisan
   server.listen(3001, () => {
     console.log('%s listening on port 3001');
   })})
