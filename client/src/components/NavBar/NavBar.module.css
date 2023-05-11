@@ -21,7 +21,7 @@
     font-weight: bold;
     text-decoration: none;
     align-items: center;
-    text-shadow: 4px 2px 0 rgb(0, 0, 0), -3px -1px 0 rgb(0, 0, 0)
+    text-shadow: 4px 2px 0 rgb(0, 0, 0), -3px -1px 0 rgb(143, 142, 142)
 }
 .homeForm:hover{
     color: #e7bb9c /* Cambia el color del texto al pasar el cursor sobre el enlace */

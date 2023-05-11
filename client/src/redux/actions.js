@@ -9,8 +9,8 @@ export const getRecipes = () =>{
         try {
             const response = await axios.get(`${URL}/recipes`)
             dispatch({type: GET_RECIPES, payload: response.data})
-        } catch (error) {
-            alert({error: error.message})}}}
+        } catch (error){
+            alert("The recipes are not available at this time");};};}
 
 //=================================================================================
 
@@ -20,7 +20,7 @@ export const getRecipeById = (id) =>{
             const response = await axios.get(`${URL}/recipes/${id}`)
             dispatch({type: GET_RECIPE, payload: response.data})         
         } catch (error) {
-            alert({error: error.message})}}}
+            alert("The recipe is not available at this time")}}}
 
 //=================================================================================
 
@@ -35,7 +35,7 @@ export const getDiets = () =>{
             const response = await axios.get(`${URL}/diets`)
            return dispatch({type: GET_DIETS, payload: response.data})          
         } catch (error) {
-            alert({error: error.message})}}}
+            alert('Diets are not available at this time')}}}
 
 //=================================================================================
 
@@ -45,7 +45,7 @@ export const RecipeByName = (name) =>{
             const response = await axios.get(`${URL}/recipes?name=${name}`)
             dispatch({type: GET_SEARCH_NAME, payload: response.data})    
         } catch (error) {
-            alert({error: error.message})}}} 
+            alert("The recipe is not available at this time")}}} 
 
 //=================================================================================        
 
@@ -55,7 +55,7 @@ export const postRecipes = (payload) => {
                 const response = await axios.post(`${URL}/recipes`, payload );
                 return dispatch({ type: SUBMIT_RECIPE, payload: response.data });
               } catch (error) {
-                 alert({error: error.message})}}}
+                 alert("The recipe could not be created")}}}
 
 //=================================================================================
 

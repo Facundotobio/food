@@ -14,6 +14,14 @@ export default function Paginado({pagina, setPagina, maximo}) {
     setInput(parseInt(input) -1);
     setPagina(parseInt(pagina) -1)};
 
+    const firstPage = () =>{
+      setInput(1);
+      setPagina(1)};
+
+    const lastPage = () =>{
+      setInput(maximo);
+      setPagina(maximo)};
+
    const maxMin = (e) =>{
     if(
         parseInt(e.target.value < 1) ||
@@ -30,9 +38,11 @@ export default function Paginado({pagina, setPagina, maximo}) {
 
   return (
     <div className={style.paginado}>
+      <button disabled={pagina===1||pagina<1} onClick={firstPage} className={style.prevPage}>First page</button>
         <button disabled={pagina===1||pagina<1} onClick={prevPage} className={style.prevPage}>BACK</button>
     <input onChange={e=>onChange(e)} onClick={e=>maxMin(e)} name='page' value={input} autoComplete='off' className={style.input} />
     <p className={style.p}> of {Math.ceil(maximo)} </p>
     <button disabled={pagina===Math.ceil(maximo)||pagina>maximo} onClick={nextPage} className={style.nextPage}>NEXT</button>
+    <button disabled={pagina===Math.ceil(maximo)||pagina>maximo} onClick={lastPage} className={style.nextPage}>Last Page</button>
     </div>
   )}

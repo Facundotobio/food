@@ -3,12 +3,12 @@ const { conn } = require('./src/db.js');
 const getDiets = require('./src/controllers/controllerDiets.js')
 
 
-conn.sync({ alter: true }).then(() => {
+conn.sync({ alter: true }).then(() => { // alter: no se borran mi datos ni se pisan
   server.listen(3001, () => {
     console.log('%s listening on port 3001');
   })})
   .then(() => {
-    getDiets()
+    getDiets()  // xq al comienzo tenia q cargar mi BDD con dietas
   }).catch((err) => {
-    console.log(err);
+    alert(err);
   })

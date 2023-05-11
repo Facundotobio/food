@@ -1,6 +1,7 @@
 import {Home, Landing, Form, Detail, NotFound} from './views/index'
 import {Route, Routes, useLocation} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
+import Loading from './components/Loading/loading';
 
 function App() {
   const location = useLocation();

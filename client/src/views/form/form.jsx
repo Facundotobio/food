@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDiets, postRecipes} from '../../redux/actions';
-import style from "./form.module.css"
+import style from "./form.module.css";
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
+
 
 const Form = () =>{
 
     const dispatch= useDispatch();
-
+    const URL = "http://localhost:3001";
     const diets = useSelector((state) => state.diets);
+    const navigate = useNavigate();
 
     useEffect(() => {
         dispatch(getDiets())
@@ -60,13 +64,14 @@ const Form = () =>{
         levelOfHealthyEating: "50",
         stepByStep: [],
         diets: [] });
-        setErrors({
+    setErrors({
         name: "",
         image: "",
         summaryOfTheDish: "",
         levelOfHealthyEating: "",
         stepByStep: "",
-        diets: ""    })};
+        diets: ""
+    })};
     
     const selectDiet = (e) => {
         let value = parseInt(e.target.value)
@@ -87,14 +92,11 @@ const Form = () =>{
 
       
     function submitHandler(e) {
-        try {
           e.preventDefault();
           form.diets = form.diets.map(diet => diet.id)
-          dispatch(postRecipes(form));
-          if(!errors.name && !errors.image && !errors.summaryOfTheDish && !errors.stepByStep && !errors.diets) return alert("Recipe created")
-          clearForm();
-        } catch (error) {
-          alert("Recipes failed to create") }}
+          axios.post(`${URL}/recipes`, form )
+          .then((response) =>{ alert('Recipe created'); clearForm(); navigate("/home");})
+         .catch ((error) => { alert("Error creating the recipe") })}
 
     return(
         <div className={style.formConteiner}>
@@ -110,14 +112,21 @@ const Form = () =>{
                 <p className={style.errors}> {errors.name}</p>
                 </div>
             </div>
+            
             <div>
                 <label className={style.label}>Image : </label>
                 <input type="text" value={form.image} name="image" onChange={changeHandler} className={style.input}></input>
                 <div>
                     <br />
-                {/* <p className={style.errors}>{errors.image}</p> */}
+                    {/* {errors.image && (
+                      <span className={style.errors}>{errors.image}</span>
+                    )} */}
                 </div>
             </div>
+            <div className={style.imageContainer}>
+                    {form.image && <img src={form.image} alt="new recipe" />}
+                  </div>    
+                  <br />
             <div>
                 <label className={style.label}>Summary : </label>
                 <textarea type="text" value={form.summaryOfTheDish} name="summaryOfTheDish" onChange={changeHandler} className={style.input2}></textarea>

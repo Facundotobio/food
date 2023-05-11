@@ -14,7 +14,9 @@ const Recipe = ({ id, name, image, diets }) => {
                 </NavLink>
             </div>
             <div className={style.imagen}>
+                <NavLink to={`/recipes/${id}`}>
                 <img src={image} alt={name} className={style.image} key={name}/>
+                </NavLink>
             </div>
 
             <div>

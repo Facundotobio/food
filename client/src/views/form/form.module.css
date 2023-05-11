@@ -1,18 +1,17 @@
 .formConteiner{
-    margin-left: 33%;
+    margin-left: 32%;
     backdrop-filter: blur(3px);
     background:linear-gradient(to bottom,#4d8b4d, transparent , #885836);
     display: flex;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
-    width:500px;
+    border: 2px solid black;
+    width:520px;
     border-radius: 25px;
 }
 
 .form{
-    height: 670px;    
-    max-height: 900px;
+    height: 100%;    
 }
 
 .Create{
@@ -25,6 +24,7 @@
     border-radius: 10px;
     cursor: pointer;
     position: static;
+    margin-bottom: 10px;
    }
 
 .Create:hover{
@@ -40,12 +40,12 @@
 
 .label{
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 3px;
 }
 .labelD{
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 3px;
     margin-left: 10px;
 }
@@ -106,11 +106,17 @@
 }
 
 .select{
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: 10px;
 }
 
 .errors{
     color: red;
-    text-shadow: 0 2px 2px hsla(0, 0%, 100%, 0.75);
+    font-size: 1.2rem;
+    text-shadow: 0 2px 2px hsla(0, 0%, 100%, 1);
 }
+.imageContainer img {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 15px;
+  }

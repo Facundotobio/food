@@ -16,7 +16,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 10px;
     border:double; /* Sin borde */
-    background-color: #292a29; /* Color de fondo */
+    background-color: #2d7a32; /* Color de fondo */
     color: rgb(255, 255, 255); 
     cursor: pointer;
     text-align: center;
@@ -26,22 +26,24 @@
 }
 
 .prevPage:hover{
-    background-color: #2d7a32; /* Cambiar el color de fondo */
+    background-color: #079110;; /* Cambiar el color de fondo */
     color: white;    
 }
 
 .nextPage:hover{
-    background-color: #2d7a32; /* Cambiar el color de fondo */
+    background-color: #079110;; /* Cambiar el color de fondo */
     color: white;    
 }
 
 .prevPage[disabled]{
-    border-color: #292a29;
+    /* border-color: #292a29; */
+    background-color: #292a29;
     cursor: no-drop;
 }
 
 .nextPage[disabled]{
-    border-color: #292a29;
+    /* border-color: #292a29; */
+    background-color: #292a29;
     cursor: no-drop;
 }
 

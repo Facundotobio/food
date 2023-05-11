@@ -46,8 +46,7 @@ switch (type){
                         else return 0 });        
         return { ...state, allrecipes: sortArray }
 //========================================================================================
-
-   
+ 
 
 case FILTER_BY_DIET:
   
@@ -95,20 +94,6 @@ return {
 ...state,
 recipes: RsortedArr, // paso al estado el ordenamiento
 };}
-
-        // case ORDER_BY_SCORE: {
-        // let recypesByScore = payload === 'asc' ? state.recipes.sort((a, b) => {
-                                   
-        //     if ((a.levelOfHealthyEating - b.levelOfHealthyEating) < 0) return 1
-        //         else return -1
-        //        }) : state.allrecipes.sort((a, b) => {
-                                
-        //      if ((a.levelOfHealthyEating - b.levelOfHealthyEating) < 0) return 1
-        //              else return -1
-        //                     })
-        //                     return{
-        //                         ...state,
-        //                         recipes: recypesByScore  }}
 
 //========================================================================================
 
