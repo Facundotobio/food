@@ -8,19 +8,27 @@ export default function Paginado({pagina, setPagina, maximo}) {
 
    const nextPage = () =>{
     setInput(parseInt(input) +1);
-    setPagina(parseInt(pagina) +1)};
+    setPagina(parseInt(pagina) +1);
+    window.scrollTo({ top: 0, behavior: 'smooth'})
+  };
 
    const prevPage = () =>{
     setInput(parseInt(input) -1);
-    setPagina(parseInt(pagina) -1)};
+    setPagina(parseInt(pagina) -1);
+    window.scrollTo({ top: 0, behavior: 'smooth'})
+  };
 
     const firstPage = () =>{
       setInput(1);
-      setPagina(1)};
+      setPagina(1)
+      window.scrollTo({ top: 0, behavior: 'smooth'})
+    };
 
     const lastPage = () =>{
       setInput(maximo);
-      setPagina(maximo)};
+      setPagina(maximo);
+      window.scrollTo({ top: 0, behavior: 'smooth'})
+    };
 
    const maxMin = (e) =>{
     if(
@@ -34,6 +42,7 @@ export default function Paginado({pagina, setPagina, maximo}) {
 
     const onChange = (e) =>{
         setInput (e.target.value);
+        window.scrollTo({ top: 0, behavior: 'smooth'})
     }
 
   return (

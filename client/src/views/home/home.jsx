@@ -11,17 +11,19 @@ const Home = () =>{
 const dispatch = useDispatch();
 
 const diets = useSelector(state => state.diets);
-
+const {recipes} = useSelector((state) => state);
 const [order, setOrder] = useState(''); //para guardar los ordenamientos
 const [score, setScore] = useState('');
 
 
 
 useEffect(() =>{
+    if(recipes.length <=0){
 dispatch(getRecipes())
 dispatch(getDiets())
 // eslint-disable-next-line
-}, [dispatch])
+}
+}, [])
 
     return(
         

@@ -18,7 +18,8 @@ const SearchBar = () =>{
         e.preventDefault();
         dispatch(RecipeByName(name));
         setName('')
-      }
+      }  
+
 
     return(
         <div className={style.searchBar}>
