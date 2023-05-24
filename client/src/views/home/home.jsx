@@ -5,7 +5,7 @@ import { getRecipes, getDiets } from '../../redux/actions'
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Footer from "../../components/Footer/Footer";
 import Filtros from '../../components/Filters/Filtros';
-
+import style from './home.module.css'
 const Home = () =>{
     
 const dispatch = useDispatch();
@@ -27,11 +27,13 @@ dispatch(getDiets())
 
     return(
         
-        <div>
+        <div >
+            <div className={style.home}>
             {<Filtros diets={diets} setorder={setOrder} setscore={setScore} />}
             <SearchBar/>
         <RecipesConteiner diets={diets}/>
         <Footer></Footer>
+        </div>
         </div>
     )
 }

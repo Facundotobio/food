@@ -11,7 +11,7 @@ const getAllRecipes = async () => {
     model: Diet, through: { attributes: [] }}})
     dbRecipes = cleanArrayDB(dbRecipes);
   const apiRecipesRaw = (
-  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI}&number=100&addRecipeInformation=true`)).data.results
+  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI2}&number=9&addRecipeInformation=true`)).data.results
    const apiRecipes = cleanArray(apiRecipesRaw)
       return [...dbRecipes, ...apiRecipes]  } 
   // RECORDAR PONER LA PETICION CON 100 RECETAS!!!!!!!!!!!!!!!!!!!!!
@@ -24,7 +24,7 @@ const searchRecipeByName = async (name) => {
   }}})
   const apiRecipesRaw = (
     await axios.get
-    (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI}&addRecipeInformation=true`)).data.results
+    (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI2}&addRecipeInformation=true`)).data.results
 
   const apiRecipes = cleanArray(apiRecipesRaw);
 
@@ -50,7 +50,7 @@ const getRecipeById = async (id)=>{
   const source = isNaN(id) ? 'bdd' : 'api'; // si el id es un string trae de la BDD sino de la api
                           // esta diferenciacion se logra al ponerle a mi modelo de recipe un ID UUID
   if(source === 'api'){
-  let recipe = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_PI}`)
+  let recipe = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_PI2}`)
   return {
     id: recipe.data.id,
     name: recipe.data.title,

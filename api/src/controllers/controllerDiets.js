@@ -6,7 +6,7 @@ const { API_KEY, API_KEY2, API_KEY3, API_KEY4, API_KEY5, API_KEY6, API_PI, API_P
 const getDiets = async () => { 
 
     const response = await axios.get(
-  `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI}&addRecipeInformation=true&number=100`);
+  `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PI2}&addRecipeInformation=true&number=9`);
   
     const allRecipes = response.data.results; 
     // la llamada a la api nos devuelve las recetas dentro de las propiedades 'data'.'results

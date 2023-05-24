@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Landing = () =>{
     return(
         <div className={style.landing}>
+            <div className={style.landingConteiner}>
             <header className={style.inicio}> Welcome to my recipe project!</header>
             <br />
             <p className={style.p}>Hello my name is Facundo, I present my individual project, which is based on recipes, it is a S.P.A (Single Page Application) that uses data from the spoonacular API, this app is a useful tool for food and cooking lovers. 
@@ -22,6 +23,7 @@ const Landing = () =>{
             <Link to="/home">
             <button  className={style.buttonLanding}>ENTER</button>
             </Link>
+            </div>
         </div>
     )
 }
