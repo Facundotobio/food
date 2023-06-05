@@ -50,8 +50,8 @@ Utilice el administrador de paquetes npm para instalar. (Recuerde usar este coma
 <br />
 <br />
 
-<<<<<<< HEAD
+
 <h2> Espero que lo disfruten tanto como lo hice yo al realizarlo... 😄 <h2>
-=======
+
 <h2> Espero que lo disfruten tanto como lo hice yo al realizarlo... 😄 <h2>
->>>>>>> 4b532c1a4a9a66b616bede5e3a6bf786767dbbf2
+
